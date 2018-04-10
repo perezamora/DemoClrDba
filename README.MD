@@ -23,3 +23,4 @@ en nuestro caso la hemos creado via script desde SQLServer,insertando algunos re
 
 ### Cosas a tener en cuenta:
 > Prestar atencion a los permisos que necesita el servicio SQLServer.
+> Cambiar la ruta donde se encuentra el assembli que se ha generado.
