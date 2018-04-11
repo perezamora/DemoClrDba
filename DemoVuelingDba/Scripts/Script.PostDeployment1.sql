@@ -12,5 +12,5 @@ Plantilla de script posterior a la implementación
 use VuelingDB
 EXEC dbo.ClrDemo
 GO
-DROP PROCEDURE ClrDemo
-DROP ASSEMBLY DemoVuelingDba
+-- DROP PROCEDURE ClrDemo
+-- DROP ASSEMBLY DemoVuelingDba

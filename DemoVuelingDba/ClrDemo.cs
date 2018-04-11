@@ -10,7 +10,6 @@ public partial class StoredProcedures
     public static void ClrDemo()
     {
         SqlContext.Pipe.Send("Hello world.\n");
-        string cadSql = string.Empty;
 
         try
         {
@@ -18,10 +17,11 @@ public partial class StoredProcedures
             {
                 conexion.Open();
                 SqlContext.Pipe.Send("La conexion ha sido abierta");
-
-                cadSql = "select Nombre from Alumnos";
-                using (SqlCommand comando = new SqlCommand(cadSql, conexion))
+                
+                using (SqlCommand comando = new SqlCommand())
                 {
+                    comando.Connection = conexion;
+                    comando.CommandText = "select Nombre from Alumnos";
                     using (SqlDataReader reader = comando.ExecuteReader())
                     {
                         while (reader.Read())
